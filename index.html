@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+    <body>
+		<div class="container-fluid" style="text-align: center;">
+			<header
+				class="jumbotron"
+				style="background-color: #1a943f; color: white;"
+			>
+				<h1>Sistema de Reconhecimento de Mascotes</h1>
+				<br><h2>Renan Conti e Yan Carvalho da Silva</h2>
+				<br><p>Internacional, Santos e Cruzeiro</p>
+			</header>
+			<div class="Informacao row">
+				<div class="col-md-3">
+					<h2>Cruzeiro</h2>
+					<p>
+						O Cruzeiro Esporte Clube é uma associação polidesportiva brasileira, com sede em Belo Horizonte, Minas Gerais. 
+						É considerado um dos maiores clubes de futebol do Brasil e da América do Sul.
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h2>Internacional</h2>
+					<p>
+						O Sport Club Internacional é um clube multiesportivo brasileiro com sede na cidade de Porto Alegre, 
+						capital do Rio Grande do Sul. Foi fundado em 4 de abril de 1909, pelos irmãos Poppe, 
+						com o objetivo de ser uma instituição democrática e sem preconceitos.
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h2>Santos</h2>
+					<p>
+						Santos Futebol Clube é um clube poliesportivo brasileiro da cidade de Santos, São Paulo. 
+						Foi fundado em 14 de abril de 1912, suas cores iniciais seriam o branco, azul e dourado, 
+						mas um ano após a sua fundação, ficou decidido que as cores do clube passariam a ser branco e preto.
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h2>Mascotes</h2>
+					<p>
+						Cruzeiro - Raposão 
+					</p>
+					<p>
+						Internacional - Saci
+					</p>
+					<p>
+						Santos - Baleia
+					</p>
+				</div>
+			</div>
+			<div class="load-image">
+				<img id="preview" src="image1.png" width="250" alt="" />
+			  </div>
+			  <div class="send-image">
+				<label for="image_ts">
+				  <p id="location-src">Clique para adicionar sua imagem</p>
+				  <input
+					type="file"
+					name="image"
+					id="image_ts"
+					onchange="previewImage()"
+				  />
+				</label>
+			<button
+				type="button"
+				class="btn btn-primary mt-3 mb-3"
+				onclick="init()"
+			>
+				Iniciar
+			</button>
+			<div id="webcam-container"></div>
+			<div class="display-4" id="label-container"></div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+		<script src="tensor.js"></script>
+  </body>
+</html>
